@@ -1,0 +1,28 @@
+{
+  "name": "gatekeeper-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proof Gatekeeper agent for the zkVerify Agent Games",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.5.0",
+    "better-sqlite3": "^11.5.0",
+    "ffjavascript": "^0.3.1",
+    "snarkjs": "^0.7.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

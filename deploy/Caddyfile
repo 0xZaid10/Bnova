@@ -1,0 +1,5 @@
+# Replace agent.example.com with your real domain (DNS A record -> your EC2 public IP).
+# Caddy gets and renews the HTTPS certificate on its own. Ports 80 and 443 must be open.
+agent.bnova.xyz {
+	reverse_proxy 127.0.0.1:8080
+}

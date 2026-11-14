@@ -1,0 +1,21 @@
+[Unit]
+Description=Proof Gatekeeper agent (zkVerify Agent Games)
+After=network-online.target
+Wants=network-online.target
+# never give up restarting after a crash
+StartLimitIntervalSec=0
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/gatekeeper-agent
+EnvironmentFile=/home/ubuntu/gatekeeper-agent/.env
+ExecStart=/usr/bin/node dist/server.js
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+
